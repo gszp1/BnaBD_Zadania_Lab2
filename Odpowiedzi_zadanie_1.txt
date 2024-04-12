@@ -1,0 +1,6 @@
+Co zawiera repozytorium:	PagingAndSortingRepository<T, ID>
+- Repozytorium PagingAndSortingRepository zawiera podstawowe metody do obsługi encji uzyskane poprzez rozszerzenie
+interfejsu CrudRepository oraz metody do sortowania i stronicowania zwracanych rezultatów.
+Co zawiera repozytorium:	JpaRepository<T, ID>
+- Repozytorium JpaRepository zawiera metody z CrudRepository oraz metody do stronicowania i sortowania, uzyskane poprzez
+rozszerzenie repozytorium PagingAndSortingRepository, ale różniące się typami zwracanych rezultatów.
