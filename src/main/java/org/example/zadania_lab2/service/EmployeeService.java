@@ -31,4 +31,8 @@ public class EmployeeService {
                 new Sort.Order(Sort.Direction.DESC, "employmentDate")
         ));
     }
+
+    public List<Employee> getAllEmployeesByFirstNameNonCaseSensitive(String firstName) {
+        return employeeRepository.findByFirstNameIgnoreCase(firstName);
+    }
 }

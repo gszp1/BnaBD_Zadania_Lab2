@@ -17,4 +17,6 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     Page<Employee> findAllByOrderByIdAsc(Pageable pageable);
 
     Page<Employee> findAllByOrderByIdDesc(Pageable pageable);
+
+    List<Employee> findByFirstNameIgnoreCase(String firstName);
 }

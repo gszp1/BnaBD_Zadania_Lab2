@@ -43,6 +43,12 @@ public class RunAtStart {
                                     "Nowak",
                                     new BigDecimal("2132.2"),
                                     LocalDate.of(2012, 12, 12)
+                            ),
+                            new Employee(
+                                    "tomasz",
+                                    "Kowalski",
+                                    new BigDecimal("4500.00"),
+                                    LocalDate.of(2024, 3, 2)
                             )
                     )
             );
@@ -55,6 +61,10 @@ public class RunAtStart {
             employees = employeeService.getAllEmployeesOrderByLastNameAscSalaryDesc();
             employees.forEach(System.out::println);
 
+            // Retrieve all employees with given first name, ignore case
+            System.out.println("\nRetrieve all employees with given first name, ignore case");
+            employees = employeeService.getAllEmployeesByFirstNameNonCaseSensitive("Tomasz");
+            employees.forEach(System.out::println);
         };
     }
 }
