@@ -22,4 +22,6 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     List<Employee> findByFirstNameIgnoreCase(String firstName);
 
     List<Employee> findBySalaryBetween(BigDecimal minSalary, BigDecimal maxSalary);
+
+    Page<Employee> findBySalaryGreaterThanOrderBySalaryDesc(BigDecimal salary, Pageable pageable);
 }

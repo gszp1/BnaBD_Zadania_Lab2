@@ -75,6 +75,11 @@ public class RunAtStart {
             );
             employees.forEach(System.out::println);
 
+            // Retrieve two employees with the largest salaries larger than 4000
+            System.out.println("\nRetrieve two employees with the largest salaries larger than 4000");
+            employees = employeeService
+                    .getGivenNumberOfEmployeesWithSalaryGreaterThan(2, new BigDecimal("4000"));
+            employees.forEach(System.out::println);
         };
     }
 }
