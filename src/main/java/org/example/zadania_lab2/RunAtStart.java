@@ -63,10 +63,18 @@ public class RunAtStart {
             employees = employeeService.getAllEmployeesOrderByLastNameAscSalaryDesc();
             employees.forEach(System.out::println);
 
-            // Retrieve all employees with given first name, ignore case
+            // Retrieve all employees with first name Tomasz, ignore case
             System.out.println("\nRetrieve all employees with given first name, ignore case");
             employees = employeeService.getAllEmployeesByFirstNameNonCaseSensitive("Tomasz");
             employees.forEach(System.out::println);
+
+            // Retrieve all employees with salary between 3000 and 6000
+            System.out.println("\nRetrieve all employees with salary between 3000 and 6000");
+            employees = employeeService.getAllEmployeesWithSalaryBetween(new BigDecimal("3000"),
+                    new BigDecimal("6000")
+            );
+            employees.forEach(System.out::println);
+
         };
     }
 }
