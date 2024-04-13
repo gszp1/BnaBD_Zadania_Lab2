@@ -54,10 +54,12 @@ public class RunAtStart {
             );
 
             // Retrieve all employees sorted by first name ascending and employment date descending
+            System.out.println("\nRetrieve all employees sorted by first name ascending and employment date descending");
             List<Employee> employees = employeeService.getAllEmployeesOrderByFirstNameAscEmploymentDateDesc();
             employees.forEach(System.out::println);
 
             // Retrieve all employees sorted by last name ascending and salary descending
+            System.out.println("\nRetrieve all employees sorted by last name ascending and salary descending");
             employees = employeeService.getAllEmployeesOrderByLastNameAscSalaryDesc();
             employees.forEach(System.out::println);
 
